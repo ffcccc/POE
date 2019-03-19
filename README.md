@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## Welcome to the POE Page
 
-You can use the [editor on GitHub](https://github.com/ffcccc/POE/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The POE software implements statistical methods for detection of Parent of Origin Effect (POE), in dataset of unrelated individuals. The aim is to suggest hints for model selection in genotype association testing.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Release v0.1 includes different implementations of the method described by C. Hoggarth in <ref>. 
 
-### Markdown
+The source code and example files can be browsed and downloaded from the github site [editor on GitHub](https://github.com/ffcccc/POE).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This work in large part follows the code was originally written by Toby Johnson and Zoltán Kutalik in <ref>.  to maintain and preview the content for your website in Markdown files.
+
+### Usage
+
+POE is a lightweight C++ library. Where feasible It makes use of vectorization to enhance performances, referring to the header-only Eigen::Array library and to the helper library EigenUtils.
+
+### Usage
+See the test.cpp file for a working example.
 
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ffcccc/POE/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### References
+-For more details see [Quicktest](https://www2.unil.ch/cbg/index.php?title=QuickTest).
+-For more details see [Paper](https://doi.org/10.1371/journal.pgen.1004508).

@@ -116,15 +116,15 @@ int main()
 				MyType pres2 = p_hat;
 
 				// compare hoggart test from quicktest with use of eigen vectors and standardization
-				HOGGART::eigen_hoggard(parAA, parAB, parBB, parY, beta_hat, se_hat, p_hat, varAA, varAB, varBB, true);
+				HOGGART::eigen_hoggart(parAA, parAB, parBB, parY, beta_hat, se_hat, p_hat, varAA, varAB, varBB, true);
 				double hogg2 = beta_hat;
 				double phogg2 = p_hat;
 				// hoggart test from quicktest with use eigen vectors but no standardization
-				HOGGART::eigen_hoggard(parAA, parAB, parBB, parY, beta_hat, se_hat, p_hat, varAA, varAB, varBB, false);
+				HOGGART::eigen_hoggart(parAA, parAB, parBB, parY, beta_hat, se_hat, p_hat, varAA, varAB, varBB, false);
 				double hogg3 = beta_hat;
 				double phogg3 = p_hat;
 				// reference hoggart test from quicktest with standardization
-				HOGGART::quicktest_hoggard(gAA, gAB, gBB, gY, double(gY.size()), beta_hat, se_hat, p_hat, varAA, varAB, varBB);
+				HOGGART::quicktest_hoggart(gAA, gAB, gBB, gY, double(gY.size()), beta_hat, se_hat, p_hat, varAA, varAB, varBB);
 				double hogg4 = beta_hat;
 				double phogg4 = p_hat;
 				

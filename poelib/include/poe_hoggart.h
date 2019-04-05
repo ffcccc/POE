@@ -28,7 +28,7 @@ namespace HOGGART {
 		
 	// from quicktest impl.
 	// always standardize phenotype
-	int quicktest_hoggard (
+	int quicktest_hoggart (
 		std::vector<double> pAA,
 		std::vector<double> pAB,
 		std::vector<double> pBB,
@@ -37,7 +37,7 @@ namespace HOGGART {
 	
 	// from quicktest impl. with use of eigen::array
 	// by default standardize phenotype
-	int eigen_hoggard (
+	int eigen_hoggart (
 		const Eigen::ArrayXd &pAA,
 		const Eigen::ArrayXd &pAB,
 		const Eigen::ArrayXd &pBB,

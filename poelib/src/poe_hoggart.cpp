@@ -251,7 +251,7 @@ namespace HOGGART {
 	}
 
 	// implementation derived from quicktest
-	int quicktest_hoggard(std::vector<double> pAA, std::vector<double> pAB, std::vector<double> pBB, std::vector<double> y,
+	int quicktest_hoggart(std::vector<double> pAA, std::vector<double> pAB, std::vector<double> pBB, std::vector<double> y,
 		double n, double &beta_hat, double &se_hat, double &p_hat, double &varAA, double &varAB, double &varBB) {
 
 		int nInt = int(n);
@@ -324,7 +324,7 @@ namespace HOGGART {
 	}
 
 	// implementation derived from quicktest with use of Eigen::lib
-	int eigen_hoggard(const Eigen::ArrayXd &pAA, const Eigen::ArrayXd &pAB, const Eigen::ArrayXd &pBB, const Eigen::ArrayXd &yy,
+	int eigen_hoggart(const Eigen::ArrayXd &pAA, const Eigen::ArrayXd &pAB, const Eigen::ArrayXd &pBB, const Eigen::ArrayXd &yy,
 		double &beta_hat, double &se_hat, double &p_hat, double &varAA, double &varAB, double &varBB,
 		const bool standardize) {
 		const int AA = 0;

@@ -1,14 +1,14 @@
 #include <iostream>
 // data loaders
 #include "fast-cpp-csv-parser-master/csv.h"
-// EM
-#include "nm_em.h"
-#include "numDeriv/numderiv.h"
-#include "lm/fastLm.h"
-#include "eigenMedian.h"
-#include "corr/eigenCorr.h"
-#include "norm/normdens.h"
+#include "Eigen/Dense"
+#include "stats/eigenMedian.h"
 #include "time/timer11.h"
+#include "poe_hoggart.h"
+
+#define MyMatrix	Eigen::MatrixXd
+#define MyVec		Eigen::VectorXd
+#define MyType double
 
 
 int testtime()
@@ -88,10 +88,10 @@ int main()
 		Eigen::Map<Eigen::VectorXi> parSNP(gSNP.data(), gSNP.size());
 		Eigen::Map<Eigen::VectorXd> parSNPd(gSNPd.data(), gSNPd.size());
 
-		double avgAA = group_mean<double>(parY.array(), parAA.array());
-		double avgBB = group_mean<double>(parY.array(), parBB.array());
+		double avgAA = group_mean<MyType>(parY.array(), parAA.array());
+		double avgBB = group_mean<MyType>(parY.array(), parBB.array());
 
-		ValArr vv(4), vv2(4);    
+		MyVec vv(4), vv2(4);
 		MyType aic = 0.0;
 		
 		cout << "Pop. size: " << N << endl;
@@ -146,24 +146,24 @@ int main()
 
 // valarray helpers x apply func.
 
-double clear(double x)
-{
-    return 0.0;
-}
-
-double print(double x)
-{
-    std::cout << x;
-    return x;
-}
-
-bool isNA(double i)
-{
-    return (i == NA);
-}
-
-bool isNA(std::vector<double> x)
-{
-    bool res = std::any_of(x.begin(), x.end(), [](double i) { return (i == NA); });
-    return res;
-}
+//double clear(double x)
+//{
+//    return 0.0;
+//}
+//
+//double print(double x)
+//{
+//    std::cout << x;
+//    return x;
+//}
+//
+//bool isNA(double i)
+//{
+//    return (i == NA);
+//}
+//
+//bool isNA(std::vector<double> x)
+//{
+//    bool res = std::any_of(x.begin(), x.end(), [](double i) { return (i == NA); });
+//    return res;
+//}

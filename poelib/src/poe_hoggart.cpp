@@ -1,11 +1,12 @@
-#include "nm_em.h"
-#include "eigenMedian.h"
+#include "poe_hoggart.h"
+#include "stats/eigenMedian.h"
 #include "lm/fastLm.h"
 #include "corr/eigenCorr.h"
 #include "norm/normdens.h"
 
 #include <climits>
 #include <cfloat>
+
 extern "C" {
 #include "dcdflib/cdflib.h"
 }
